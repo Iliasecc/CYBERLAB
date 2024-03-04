@@ -433,7 +433,8 @@ label[for="inlineFormSelectPrefPython"] {
     padding: 3px 5px; /* Ajustez la taille du padding selon vos besoins */
     border: none;
     cursor: pointer;
-    margin-left: 580px; /* Ajustez la marge selon vos besoins pour décaler vers la droite */
+    margin-left: 580px;
+    position : absolute;/* Ajustez la marge selon vos besoins pour décaler vers la droite */
 }
 .custom-output {
     color: black; /* Couleur du texte en noir */
