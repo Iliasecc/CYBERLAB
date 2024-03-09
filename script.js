@@ -17,60 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Initialisez l'objet OpenAI avec votre clé API
-// Initialisez l'objet openai avec votre clé API
-const apiKey= ('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');
-
-// Déplacez la déclaration de openai à l'extérieur de vos fonctions
-
-function activateChatbot() {
-    // Afficher la zone de discussion
-    document.getElementById('chatbot-popup').style.display = 'block';
-}
-
-function toggleChatbot() {
-    var popup = document.getElementById("chatbot-popup");
-    var icon = document.getElementById("icon");
-
-    // Toggle la visibilité de la popup
-    popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
-
-    // Toggle la classe pour changer l'icône de cercle à X
-    icon.classList.toggle("to-x");
-}
-
-function sendMessage() {
-    // Récupérer le message de l'utilisateur depuis la zone de chat
-    var userMessage = document.getElementById("user-input").value;
-
-    // Récupérer la zone de chat pour afficher les messages
-    var chatMessages = document.getElementById("chat-messages");
-
-    // Afficher l'identification de l'utilisateur dans la zone de chat
-    chatMessages.innerHTML += `<div class="user-message">You: ${userMessage}</div>`;
-
-    // Appeler l'API GPT-3 pour obtenir la réponse
-    openai.complete({
-        engine: 'text-davinci-003',
-        prompt: userMessage,
-        max_tokens: 150
-    }).then(response => {
-        var chatbotResponse = response.choices[0].text;
-
-        // Afficher la réponse du chatbot dans la zone de chat
-        chatMessages.innerHTML += `<div class="chatbot-message">Chatbot: ${chatbotResponse}</div>`;
-    }).catch(error => {
-        console.error('Erreur lors de la communication avec GPT-3 :', error);
-    });
-
-    // Effacer le champ de saisie utilisateur
-    document.getElementById("user-input").value = "";
-}
-
-
-
-
-
 function goToDashboard() {
     window.location.href = "indexx.html";
 }
@@ -82,6 +28,7 @@ function viewProfile() {
 function submitReportBtn() {
     window.location.href = "submit.html"
 }
+
 document.addEventListener("DOMContentLoaded", function () {
     const pdfInput = document.getElementById("pdfInput");
     const pdfContainer = document.getElementById("pdfContainer");
@@ -167,11 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ajoutez un gestionnaire d'événements pour le bouton Soumettre PDF
     document.getElementById("submitPdfBtn").addEventListener("click", submitPdf);
 });
-
-function logout() {
-    window.location.href = "index.html";
-}
-
 function startLiveVideo() {
     // TODO: Implémenter la logique pour démarrer la vidéo en direct.
 }
@@ -309,6 +251,20 @@ function toggleOutputScroll() {
         outputTextarea.style.display = "none";
         button.textContent = "▲"; // Change la flèche vers le haut
     }
+}
+window.watsonAssistantChatOptions = {
+    integrationID: "d9ab082d-21f9-4d83-bdd0-26d45c408f7c", // The ID of this integration.
+    region: "eu-de", // The region your integration is hosted in.
+    serviceInstanceID: "c8ac51bc-6630-4efb-ab1a-88f60f4b2d60", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+function logout() {
+    window.location.href = "index.html";
 }
 
 
