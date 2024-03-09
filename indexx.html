@@ -28,8 +28,8 @@
     <!-- Header -->
     <nav>
         <div class="logo" style="display: flex; align-items: center;">
-            <img src="image/logocyberlab.png" alt="Logo" style="width: 90px; height: 65px; border: none; margin-right: 2px">
-            <span style="color: #01939c; font-size: 25px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-family: 'Arial', sans-serif; text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); transform: skewX(-5deg);">CYBERLAB</span>
+            <img src="CYBERLABLOGO.jpg" alt="Logo" class="logo-image">
+            <span style="color: #feffff; font-size: 25px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-family: 'Arial', sans-serif; text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); transform: skewX(-5deg);">CYBERLAB</span>
         </div>
         
         
@@ -46,8 +46,8 @@
             <li><a href="#" onclick="logout()">Se Déconnecter 🚪</a></li>
             <li>   
                 <select class="form-select" id="experiences" onchange="changeExperience()">
-                    <option value="exp1">Expérience 1 🧪</option>
-                    <option value="exp2">Expérience 2 🧪</option>
+                    <option value="exp1">Travail Pratique 1 🧪</option>
+                    <option value="exp2">Travail Pratique 2 🧪</option>
                 </select>
             </li>
         </ul>    
@@ -155,33 +155,9 @@
                 </section>
             </div>
         </div>
-   
-        <div class="chatbot-icon" onclick="toggleChatbot()">
-            <div id="icon" class="circle">
-                <img src="https://th.bing.com/th/id/R.958e7e16adfd09ccb9c422879138876e?rik=0i1EFquA5d0Y2Q&pid=ImgRaw&r=0" alt="Chatbot Icon">
-            </div>
-        </div>
-    
-        <!-- Chatbot Popup Section -->
-        <div id="chatbot-popup">
-            <div class="chatbot-header">
-                <span onclick="toggleChatbot()" class="close">&times;</span>
-                <span class="chatbot-title">Chatbot</span>
-            </div>
-            <div class="chatbot-content">
-                <div id="chat-messages"></div>
-                <div class="input-container">
-                    <input class="form-control" type="text" id="user-input" placeholder="Posez votre question...">
-                    <div id="send-message-icon"  onclick="sendMessage()">
-                        <img src="https://www.iconbunny.com/icons/media/catalog/product/6/0/602.9-send-message-icon-iconbunny.jpg" alt="input-container">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
     </div>
-    
 </main>
+
 
 <script src="script.js"></script>
 
