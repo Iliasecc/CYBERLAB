@@ -10,19 +10,32 @@
     overflow-x: hidden;
     overflow-y: auto;
 }
+/* Add this rule to make the logo image a circle */
+.logo-image {
+    width: 60px;
+    height: 60px;
+    border: none;
+    margin-right: 2px;
+    border-radius: 50%;
+    object-fit: cover; /* Make the image a circle */
+}
+
 
 nav {
     height: 4.5rem;
     width: 100vw;
-    background-color: #2c3e50; /* Couleur de fond du nav - Bleu-gris */
+    background-color: #036383; /* Couleur de fond du nav - Bleu-gris */
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     position: fixed;
     z-index: 10;
 }
+.nav-links li a {
+    color: #ffffff; /* Couleur des liens du nav - Blanc */
+}
 
 .nav-links li a:hover {
-    color: #3498db; /* Couleur de survol des liens - Bleu clair */
+    color: #ffffff; /* Couleur de survol des liens - Bleu clair */
 }
 
 main {
@@ -41,7 +54,7 @@ main {
     display: flex;
     align-items: center;
     margin-right: 6px; /* Ajustez la marge entre les images */
-    background-color: #3498db; /* Ajoutez cette ligne pour définir la couleur du cadre */
+    background-color: #036383; /* Ajoutez cette ligne pour définir la couleur du cadre */
 }
 
 .image-label {
@@ -87,15 +100,7 @@ main {
 
 
  
- /*Styling logo*/
- .logo{
-    padding:1vh 1vw ;
-    text-align: center;
- }
- .logo img {
-    height: 5rem;
-    width: 5rem;
- }
+ 
  
  /*Styling Links*/
  .nav-links {
@@ -106,6 +111,7 @@ main {
     align-items: center ;
     text-transform: uppercase;
     font-size: 14px;
+    
  }
  .nav-links li a{
     text-decoration: none;
@@ -124,15 +130,15 @@ main {
     font-size: 14px;
     cursor: pointer;
     text-align: center;
-    background-color: #22638f; /* Couleur de fond du bouton - Bleu clair */
-    color: #ecf0f1; /* Couleur du texte du bouton - Blanc */
+    background-color: #036383; /* Couleur de fond du bouton - Bleu clair */
+    color: #ffffff; /* Couleur du texte du bouton - Blanc */
     border: none;
     border-radius: 5px;
     margin-left: 10px;
 }
 
 #experiences:hover {
-    background-color: #2c3e50; /* Couleur de fond au survol - Bleu plus foncé */
+    background-color: #013849; /* Couleur de fond au survol - Bleu plus foncé */
 }
 
 .join-button {
@@ -207,124 +213,7 @@ iframe, img {
     padding: 5px;
 }
 
-
-
-
-
-.circle {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background-color: #f6f7f8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px; /* Ajustez cette valeur selon vos besoins */
-    z-index: 1;
-}
-
-/* Chatbot Popup Styles */
-#chatbot-popup {
-    display: none;
-    position: fixed;
-    bottom: 110px;
-    right: 20px;
-    border: 1px solid #3498db;
-    width: 300px;
-    max-height: 400px;
-    overflow-y: auto;
-    background-color: #87CEEB; /* Couleur bleu ciel */
-    padding: 10px;
-    border-radius: 5px;
-    margin: 0px;
-}
-
-.chatbot-header {
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px;
-    padding: 5px;;
-    background-color: #87CEEB;
-}
-
-.chatbot-title {
-    color: white;
-    height: fit-content; /* Couleur du texte de l'en-tête */
-}
-
-.input-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Nouveau style pour espacement */
-}
-
-#send-message-icon {
-    background-color: #f9fafa;
-    padding: 0px; /* Ajustez la marge */
-    border-radius: 50%;
-    cursor: pointer;
-    margin-top: 5px;
-    margin-left: 5px;
-    
-}
-
-#send-message-icon img {
-    width: 34px; /* Ajustez la largeur de l'image selon vos besoins */
-    height: 34px;
-    border: none;
-    vertical-align: middle;/* Ajustez la hauteur de l'image selon vos besoins */
-}
-
-
-
-/* Styles for the transition from circle to X */
-#icon.to-x {
-    transform: rotate(90deg);
-}
-
-/* Chatbot Content Styles */
-.chatbot-content {
-    padding: 20px;
-}
-
-/* Chat Messages Styles */
-#chat-messages {
-    height: 200px;
-    overflow-y: auto;
-}
-
-/* User Input Styles */
-#user-input {
-    width: 100%;
-    margin-top: 10px;
-    padding: 8px;
-}
-
-/* Close Icon Styles */
-.close {
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-.circle img {
-    border: none; /* Supprime la bordure autour de l'image */
-    
-}
-#icon img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-
+  
 
 /* Ajouter le style suivant pour les étiquettes */
 .section-label {
@@ -386,16 +275,16 @@ section:hover .section-label {
 .btn-primary1 {
     font-size: 14px;
     padding: 6px 12px;
-    border: 1px solid #3498db; /* Couleur de la bordure */
-    background-color: #3498db; /* Couleur de fond */
+    border: 1px solid #036383; /* Couleur de la bordure */
+    background-color: #036383; /* Couleur de fond */
     color: #ffffff; /* Couleur du texte */
     border-radius: 4px; /* Coins arrondis */
     cursor: pointer;
 }
 
 .btn-primary1:hover {
-    background-color: #2980b9; /* Couleur de fond au survol */
-    border: 1px solid #2980b9; /* Couleur de la bordure au survol */
+    background-color: #036383; /* Couleur de fond au survol */
+    border: 1px solid #036383; /* Couleur de la bordure au survol */
 }
 
 .btn-primary {
@@ -411,30 +300,30 @@ section:hover .section-label {
 /* Ajustements pour la section de code */
 label[for="inlineFormSelectPrefPython"] {
     color: rgb(253, 253, 255); /* Couleur bleue */
-    background-color: #22638f;
+    background-color: #036383;
 }
 
 /* Si vous voulez également changer la couleur du texte dans la liste déroulante (select), vous pouvez utiliser : */
 #inlineFormSelectPrefPython {
     color: rgb(251, 251, 255); /* Couleur bleue */
-    background-color: #2980b9;
+    background-color: #036383;
 }
 
 /* Si vous voulez changer la couleur du texte de l'option sélectionnée, vous pouvez utiliser : */
 #inlineFormSelectPrefPython option[selected] {
     color: blue; /* Couleur bleue */
-    background-color: #22638f;
+    background-color: #036383;
 }
 
 
 #codeButton {
     color: #fff;
-    background-color: #2980b9;
+    background-color: #036383;
     padding: 3px 5px; /* Ajustez la taille du padding selon vos besoins */
     border: none;
     cursor: pointer;
     margin-left: 580px;
-    position : absolute;/* Ajustez la marge selon vos besoins pour décaler vers la droite */
+    position: absolute; /* Ajustez la marge selon vos besoins pour décaler vers la droite */
 }
 .custom-output {
     color: black; /* Couleur du texte en noir */
@@ -507,26 +396,21 @@ label[for="inlineFormSelectPrefPython"] {
     padding: 15px 1Opx; /* Ajustez selon vos besoins */
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* Set your desired background color */
+    color: black !important; /* Set your desired text color */
+    padding: 2px 0; /* Adjust the padding as needed */
+    text-align: center;
+    
+    font-size: 10px; /* Adjust the font size as needed */
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+}
 
 
-
-
-
-/* Styles pour la nouvelle zone de code en Python */
-
-
-/* Autres styles pour votre application... */
-
-
-
-
-
- 
-
-/* Style supplémentaire si nécessaire */
-
- /*Stying for small screens*/
-/* Ajustements pour le mode hamburger */
 @media screen and (max-width: 800px) {
     nav {
         position: fixed;
