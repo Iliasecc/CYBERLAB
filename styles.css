@@ -319,11 +319,15 @@ label[for="inlineFormSelectPrefPython"] {
 #codeButton {
     color: #fff;
     background-color: #036383;
-    padding: 3px 5px; /* Ajustez la taille du padding selon vos besoins */
+    padding: 10px;
     border: none;
     cursor: pointer;
-    margin-left: 580px;
-    position: absolute; /* Ajustez la marge selon vos besoins pour décaler vers la droite */
+    position: absolute;
+    right: 0; /* Positionner le bouton à droite */
+    top: 0; /* Positionner le bouton en bas */
+    border-radius: 5px;
+    margin: 0px;
+    transition: background 0.3s ease;
 }
 .custom-output {
     color: black; /* Couleur du texte en noir */
