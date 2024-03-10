@@ -6,8 +6,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #3498db; /* Couleur d'arrière-plan bleue */
+    background-color: #036383; /* Couleur d'arrière-plan bleue */
 }
+
 
 main {
     background-color: #eceaea; /* Couleur d'arrière-plan blanc */
@@ -35,7 +36,7 @@ textarea {
 button {
     padding: 5px 11px; /* Ajustez la taille des boutons */
     margin: 18px 14px; /* Ajoute de l'espace en haut et en bas des boutons */
-    background-color: #2980b9; /* Couleur de fond des boutons */
+    background-color: #036383; /* Couleur de fond des boutons */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -44,7 +45,7 @@ button {
 }
 
 button:hover {
-    background-color: #3498db; /* Changement de couleur au survol */
+    background-color: #036383; /* Changement de couleur au survol */
 }
 
 .delete-pdf-btn {
@@ -67,7 +68,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #3498db;
+    color: #036383;
 }
 
 .nav-links {
@@ -83,6 +84,7 @@ nav {
 .nav-links li a {
     text-decoration: none;
     margin: 0 0.7vw;
+    color: #fff;
 }
 
 .hamburger div {
@@ -113,6 +115,7 @@ nav {
     .nav-links {
         position: fixed;
         background: #131418;
+        color: #fff;
         height: 100vh;
         width: 100%;
         flex-direction: column;
@@ -172,10 +175,15 @@ nav {
         cursor: pointer;
         text-align: center;
         background-color: #11111115;
-        color: rgb(64, 187, 181);
+        color: #ffffff;
         border: none;
         border-radius: 5px;
         margin-left: 10px;
+    }
+    .nav-item {
+        margin: 10px;
+        font-size: 18px;
+        color: #fff;
     }
 }
 
