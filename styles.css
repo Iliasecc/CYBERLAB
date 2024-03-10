@@ -12,13 +12,14 @@
 }
 /* Add this rule to make the logo image a circle */
 .logo-image {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border: none;
-    margin-right: 2px;
+    margin-right: 10px; /* Ajustez cette valeur selon vos besoins */
     border-radius: 50%;
     object-fit: cover; /* Make the image a circle */
 }
+
 
 
 nav {
