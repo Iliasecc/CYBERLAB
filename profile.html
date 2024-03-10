@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
 	<meta name="description" content="profile page,bandhan">
 	<title>Profile page</title>
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
     <!-- Header -->
     <nav>
         <div class="logo" style="display: flex; align-items: center;">
-            <span style="color: #01939c; font-size: 26px; font-weight: bold; letter-spacing: 1px; margin-left: 20px;">CYBERLAB</span>
+            <span style="color: #feffff; font-size: 25px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-family: 'Arial', sans-serif; text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); transform: skewX(-5deg);Margin-left:25px;Margin-top:5px;">CYBERLAB</span>
         </div>
         <div class="hamburger">
             <div class="line1"></div>
@@ -24,7 +24,7 @@
             <div class="line3"></div>
         </div>
         <ul class="nav-links">
-            <li><a href="#" onclick="goToDashboard()">Accueil 🏠</a></li>
+            <li><a href="#" onclick="gotoacceuil()">Accueil 🏠</a></li>
             <li><a href="#" onclick="viewProfile()">Profil 👤</a></li>
             <li><a href="#" onclick="downloadResults()">Télécharger Résultats 📊</a></li>
             <li><a href="#" onclick="submitReportBtn()">Déposer Compte Rendu 📝</a></li>
@@ -94,6 +94,11 @@
 
 	</div>
 	<div class="col-sm-3"></div>
+<script>
+	function gotoacceuil(){
+		window.location.href = "index1.html";
+	}
+</script>
 
 </body>
 </html>
