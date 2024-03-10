@@ -16,8 +16,8 @@
     <!-- Header -->
     <nav>
         <div class="logo" style="display: flex; align-items: center;">
-            <img src="image/logocyberlab.png" alt="Logo" style="width: 90px; height: 65px; border: none; margin-right: 2px">
-            <span style="color: #01939c; font-size: 25px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-family: 'Arial', sans-serif; text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); transform: skewX(-5deg);">CYBERLAB</span>
+            <img src="IMAGE/CYBERLABLOGO.jpg" alt="Logo" class="logo-image">
+            <span style="color: #feffff; font-size: 25px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-family: 'Arial', sans-serif; text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); transform: skewX(-5deg);">CYBERLAB</span>
         </div>
         <div class="hamburger">
             <div class="line1"></div>
@@ -32,8 +32,12 @@
             <li><a href="#" onclick="logout()">Se Déconnecter 🚪</a></li>
             <li>   
                 <select class="form-select" id="experiences2" onchange="changeExperience2()">
-                    <option value="exp2">Expérience 2 🧪</option>
-                    <option value="exp1">Expérience 1 🧪</option>
+                    <option value="exp2">Travail Pratique 2 🧪</option>
+                    <option value="exp1">Travail Pratique 1 🧪</option>
+                    <option value="exp2">Travail Pratique 3 🧪</option>
+                    <option value="exp2">Travail Pratique 4 🧪</option>
+                    <option value="exp2">Travail Pratique 5 🧪</option>
+                    <option value="exp2">Travail Pratique 6 🧪</option>
                 </select>
             </li>            
         </ul>    
@@ -57,7 +61,7 @@
             <!-- Video Section -->
             <section class="video-section">
                 <div class="section-label">Vidéo</div>
-                <button class="btn btn-primary1" onclick="startLiveVideo()">Lancer la vidéo en direct ▶️</button>
+                <button class="btn btn-primary1" onclick="startLiveVideo()">Lancer le retour en direct ▶️</button>
                 <button class="btn btn-primary" onclick="toggleFullScreen('video-section')">
                     <i class="fas fa-expand"></i> 
                 </button>
@@ -80,35 +84,23 @@
                     </div>
                 </section>
             </div>
-        </div>
-   
-        <div class="chatbot-icon" onclick="toggleChatbot()">
-            <div id="icon" class="circle">
-                <img src="https://th.bing.com/th/id/R.958e7e16adfd09ccb9c422879138876e?rik=0i1EFquA5d0Y2Q&pid=ImgRaw&r=0" alt="Chatbot Icon">
-
-            </div>
-        </div>
-    
-        <!-- Chatbot Popup Section -->
-        <div id="chatbot-popup">
-            <div class="chatbot-header">
-                <span onclick="toggleChatbot()" class="close">&times;</span>
-                <span class="chatbot-title">Chatbot</span>
-            </div>
-            <div class="chatbot-content">
-                <div id="chat-messages"></div>
-                <div class="input-container">
-                    <input class="form-control" type="text" id="user-input" placeholder="Posez votre question...">
-                    <div id="send-message-icon"  onclick="sendMessage()">
-                        <img src="https://www.iconbunny.com/icons/media/catalog/product/6/0/602.9-send-message-icon-iconbunny.jpg" alt="input-container">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+        </div>     
     </div>
     
 </main>
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "d9ab082d-21f9-4d83-bdd0-26d45c408f7c", // The ID of this integration.
+        region: "eu-de", // The region your integration is hosted in.
+        serviceInstanceID: "c8ac51bc-6630-4efb-ab1a-88f60f4b2d60", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+</script>
 
 
 </body>
