@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function goToDashboard() {
-    window.location.href = "indexx.html";
+    window.location.href = "index1.html";
 }
 
 function viewProfile() {
