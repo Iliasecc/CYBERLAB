@@ -12,8 +12,8 @@
 }
 /* Add this rule to make the logo image a circle */
 .logo-image {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border: none;
     margin-right: 10px; /* Ajustez cette valeur selon vos besoins */
     border-radius: 50%;
