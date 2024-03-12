@@ -16,7 +16,7 @@
     <!-- Header -->
     <nav>
         <div class="logo" style="display: flex; align-items: center;">
-            <img src="image/cyberlog.jpg" alt="Logo" class="logo-image">
+            <img src="c:\Users\Lenovo\Desktop\2763ac72-c50b-4324-a529-fbf240678231.jpg" alt="Logo" class="logo-image">
             <span style="color: #feffff; font-size: 25px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-family: 'Arial', sans-serif; text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); transform: skewX(-5deg);">CYBERLAB</span>
         </div>
         <div class="hamburger">
@@ -86,8 +86,16 @@
             </div>
         </div>     
     </div>
+    <div class="overlay main-overlay" id="overlay">
+        <div class="overlay-message">
+            <p>Restez à l'affût, car de passionnants travaux pratiques sont en cours de préparation. Revenez bientôt pour plonger dans le monde stimulant de l'apprentissage sur CyberLab !</p>
+        </div>
+    </div>
+    
     
 </main>
+
+
 <script>
     window.watsonAssistantChatOptions = {
         integrationID: "d9ab082d-21f9-4d83-bdd0-26d45c408f7c", // The ID of this integration.
@@ -100,6 +108,18 @@
         t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
         document.head.appendChild(t);
       });
+      document.addEventListener("DOMContentLoaded", function () {
+        var isSectionImplemented = false; // Changez ceci en fonction de l'état de votre implémentation
+
+        if (!isSectionImplemented) {
+            document.querySelector(".main-overlay").style.display = "flex";
+
+            // Ajoutez un gestionnaire d'événements pour masquer l'overlay lorsqu'on clique
+            document.querySelector(".main-overlay").addEventListener("click", function () {
+                document.querySelector(".main-overlay").style.display = "none";
+            });
+        }
+    });
 </script>
 
 
