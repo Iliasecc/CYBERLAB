@@ -409,6 +409,28 @@ label[for="inlineFormSelectPrefPython"] {
     font-size: 10px; /* Adjust the font size as needed */
     box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
 }
+.overlay.main-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.overlay.main-overlay .overlay-message {
+    text-align: center;
+    max-width: 80%;
+}
+
+
 
 
 @media screen and (max-width: 800px) {
