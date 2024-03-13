@@ -3,7 +3,7 @@
     height: 600px;
     border-radius:30px;
     margin-top: 55px;
-    box-shadow:20px 20px 15px 0px #036383;
+    box-shadow:0px 10px 15px 10px #036383;
 }
 
 
@@ -54,6 +54,29 @@ nav {
     text-decoration: none;
     margin: 0 0.7vw;
     color: #f2f5f7;
+}
+.home-button ,.TP-button , .Deconn-button {
+    text-decoration: none;
+    color: #feffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: 60px;
+}
+
+.home-button{
+    margin-left: 80px;
+}
+.home-button:hover {
+    color: #4CAF50 /* Couleur différente au survol */
+}
+.TP-button:hover {
+    color: #4CAF50 /* Couleur différente au survol */
+}
+.Deconn-button:hover {
+    color: #4CAF50 /* Couleur différente au survol */
 }
 
 .hamburger div {
