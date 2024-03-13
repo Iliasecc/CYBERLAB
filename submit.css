@@ -20,9 +20,31 @@ main {
 #pdfContainer {
     text-align: center;
 }
+.home-button ,.TP-button , .Deconn-button {
+    text-decoration: none;
+    color: #feffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: 60px;
+}
 
+.home-button{
+    margin-left: 80px;
+}
+.home-button:hover {
+    color: #4CAF50 /* Couleur différente au survol */
+}
+.TP-button:hover {
+    color: #4CAF50 /* Couleur différente au survol */
+}
+.Deconn-button:hover {
+    color: #4CAF50 /* Couleur différente au survol */
+}
 h1 {
-    color: #333;
+    color: #ffffff;
 }
 
 input[type="file"],
@@ -30,14 +52,15 @@ textarea {
     margin: 15px 0;
     width: calc(100% - 30px); /* Ajustez la largeur comme nécessaire */
     padding: 10px; /* Ajoutez un peu de rembourrage pour un aspect plus aéré */
-    box-sizing: border-box; /* Assure que la largeur inclut le padding */
+    box-sizing: border-box; 
+    
 }
 
 button {
     padding: 5px 11px; /* Ajustez la taille des boutons */
     margin: 18px 14px; /* Ajoute de l'espace en haut et en bas des boutons */
     background-color: #036383; /* Couleur de fond des boutons */
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
