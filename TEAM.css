@@ -77,7 +77,7 @@ body {
 }
 
 .home-button:hover {
-    color: #4CAF50 /* Couleur différente au survol */
+    color: #3ee6e6; /* Couleur différente au survol */
 }
 .logo-container {
     width: 50px;
