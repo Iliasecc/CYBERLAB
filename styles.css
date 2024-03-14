@@ -12,12 +12,13 @@
 }
 /* Add this rule to make the logo image a circle */
 .logo-image {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border: none;
     margin-right: 10px; /* Ajustez cette valeur selon vos besoins */
     border-radius: 50%;
-    object-fit: cover; /* Make the image a circle */
+    object-fit: cover; 
+    /* Make the image a circle */
 }
 
 
@@ -125,6 +126,12 @@ main {
  .nav-links li a:hover::before{
     width: 80%;
  }
+ .nav-links li:hover a {
+    color: #3ee6e6; /* Couleur différente au survol */
+}
+
+ 
+ 
 
  #experiences {
     padding: 5px 25px 6px 10px;
