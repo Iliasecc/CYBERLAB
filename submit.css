@@ -24,7 +24,6 @@ main {
     text-decoration: none;
     color: #feffff;
     font-size: 18px;
-    font-weight: bold;
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
@@ -35,13 +34,13 @@ main {
     margin-left: 80px;
 }
 .home-button:hover {
-    color: #4CAF50 /* Couleur différente au survol */
+    color: #3ee6e6; /* Couleur différente au survol */
 }
 .TP-button:hover {
-    color: #4CAF50 /* Couleur différente au survol */
+    color: #3ee6e6;/* Couleur différente au survol */
 }
 .Deconn-button:hover {
-    color: #4CAF50 /* Couleur différente au survol */
+    color: #3ee6e6; /* Couleur différente au survol */
 }
 h1 {
     color: #ffffff;
