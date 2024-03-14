@@ -13,6 +13,18 @@
             transition: transform 0.3s ease;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
         }
+       /* Utilisation d'un sélecteur plus spécifique */
+       .navbar-menu .navbar-start .navbar-item.is-active, 
+       .navbar-menu .navbar-start .navbar-item:hover {
+           background-color: transparent !important;
+       }
+       .navbar-menu .navbar-start .navbar-item:hover {
+        color: #3ee6e6 !important; /* Couleur différente au survol */
+        }
+    
+
+
+    
 
         .experience-img img {
             width: 100%;
@@ -131,6 +143,7 @@
             height: 100%;
             object-fit: cover;
         }
+        
         /* Ajoutez ce bloc de styles CSS à votre section style */
 /* Ajoutez ce bloc de styles CSS à votre section style */
         @media screen and (max-width: 800px) {
@@ -203,10 +216,7 @@
     </div>
   
     <div class="navbar-brand">
-    
         <span style="color: #feffff; font-size: 25px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-family: 'Arial', sans-serif; text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5); transform: skewX(-5deg); margin-top:8px; margin-left:8px; margin-right:18px;">CYBERLAB</span>
-    
-
         <div class="hamburger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -219,7 +229,7 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="#" onclick="gotoacceuil()">
+      <a class="navbar-item" href="#" onclick="gotoacceuil()" >
         Accueil
       </a>
       <a class="navbar-item" href="#" onclick="vwprofile()">
@@ -359,7 +369,7 @@
 </section>
 <footer class="footer">
     <div class="content has-text-centered">
-        <p>Ce site est développé par le groupe lbd 26.</p>
+        <p>Ce site est développé par le groupe plbd 26.</p>
         <p>&copy; 2024 Tous droits réservés.</p>
     </div>
 </footer>
