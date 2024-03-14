@@ -55,28 +55,30 @@ nav {
     margin: 0 0.7vw;
     color: #f2f5f7;
 }
-.home-button ,.TP-button , .Deconn-button {
+.home-button,
+.TP-button,
+.Deconn-button {
     text-decoration: none;
     color: #feffff;
     font-size: 18px;
-    font-weight: bold;
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
     margin-left: 60px;
 }
 
+
 .home-button{
     margin-left: 80px;
 }
 .home-button:hover {
-    color: #4CAF50 /* Couleur différente au survol */
+    color:#3ee6e6; /* Couleur différente au survol */
 }
 .TP-button:hover {
-    color: #4CAF50 /* Couleur différente au survol */
+    color: #3ee6e6; /* Couleur différente au survol */
 }
 .Deconn-button:hover {
-    color: #4CAF50 /* Couleur différente au survol */
+    color: #3ee6e6; /* Couleur différente au survol */
 }
 
 .hamburger div {
