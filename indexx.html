@@ -21,7 +21,13 @@
     
     <!-- Inclure votre fichier de style -->
     <link rel="stylesheet" href="styles.css">
-    
+    <style>
+        /* Modification de la couleur de fond de la zone de texte */
+        .cm-s-dracula.CodeMirror {
+            background-color: #000000 !important;
+            border: none; 
+        }
+    </style>
 </head>
 
 <body>
@@ -124,14 +130,7 @@
                             <!-- Utiliser CodeMirror pour la nouvelle zone de texte -->
                             <textarea id="pythonEditor" class="form-control" aria-label="Python Code" placeholder="Écrire du code Python ici..."></textarea>
                         </div>
-                        <div class="col d-flex flex-column output-column">
-                            <button class="scroll-btn" onclick="toggleOutputScroll()">▲</button>
-                            <div class="h-50">
-                                <label for="outputPython" class="text-light mb-0">Output</label>
-                                <textarea type="text" id="outputPython" class="form-control custom-output" aria-label="Python Output" readonly></textarea>
-                            </div>
-                            
-                        </div>
+                        
                         
                         
                     </div>
