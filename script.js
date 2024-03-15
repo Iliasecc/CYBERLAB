@@ -239,19 +239,7 @@ runPython.addEventListener("click", async function () {
 
 // Modifiez cette fonction dans votre fichier script.js
 
-function toggleOutputScroll() {
-    var outputTextarea = document.getElementById("outputPython");
-    var button = document.querySelector(".scroll-btn");
 
-    // Alterne la visibilité de la zone d'output
-    if (outputTextarea.style.display === "none" || outputTextarea.style.display === "") {
-        outputTextarea.style.display = "block";
-        button.textContent = "▼"; // Change la flèche vers le bas
-    } else {
-        outputTextarea.style.display = "none";
-        button.textContent = "▲"; // Change la flèche vers le haut
-    }
-}
 window.watsonAssistantChatOptions = {
     integrationID: "d9ab082d-21f9-4d83-bdd0-26d45c408f7c", // The ID of this integration.
     region: "eu-de", // The region your integration is hosted in.
