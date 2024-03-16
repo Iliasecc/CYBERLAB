@@ -6,12 +6,12 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #036383; /* Couleur d'arrière-plan bleue */
+    background-color: #ffffff; /* Couleur d'arrière-plan bleue */
 }
 
 
 main {
-    background-color: #eceaea; /* Couleur d'arrière-plan blanc */
+    background-color: #fffcfc; /* Couleur d'arrière-plan blanc */
     border-radius: 8px;
     box-shadow: 0 0 30px rgba(1, 0, 0, 5);
     padding: 20px; /* Ajustez l'espacement intérieur selon vos besoins */
@@ -20,36 +20,32 @@ main {
 #pdfContainer {
     text-align: center;
 }
-.home-button ,.TP-button , .Deconn-button {
+.home-button, .TP-button, .Deconn-button {
+    font-family: Arial, sans-serif !important; 
     text-decoration: none;
     color: #feffff;
     font-size: 18px;
+    margin-top: 6px;
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
     margin-left: 60px;
+    border: none;
+    background-color: transparent;
 }
 
-.home-button{
-    margin-left: 80px;
+.home-button:hover, .TP-button:hover, .Deconn-button:hover {
+    color: #3ee6e6;
 }
-.home-button:hover {
-    color: #3ee6e6; /* Couleur différente au survol */
-}
-.TP-button:hover {
-    color: #3ee6e6;/* Couleur différente au survol */
-}
-.Deconn-button:hover {
-    color: #3ee6e6; /* Couleur différente au survol */
-}
+
 h1 {
-    color: #ffffff;
+    color: #312727;
 }
 
 input[type="file"],
 textarea {
     margin: 15px 0;
-    width: calc(100% - 30px); /* Ajustez la largeur comme nécessaire */
+    width: calc(90% - 30px); /* Ajustez la largeur comme nécessaire */
     padding: 10px; /* Ajoutez un peu de rembourrage pour un aspect plus aéré */
     box-sizing: border-box; 
     
@@ -81,7 +77,7 @@ nav {
     height: 4.5rem;
     width: 100vw;
     background-color: #036383;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -109,24 +105,7 @@ nav {
     color: #fff;
 }
 
-.hamburger div {
-    width: 30px;
-    height: 3px;
-    background: #f2f5f7;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
 
-.hamburger {
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
-    transition: all 0.7s ease;
-}
 
 @media screen and (max-width: 4800px) {
     nav {
