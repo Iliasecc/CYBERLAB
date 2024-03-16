@@ -262,9 +262,6 @@
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Password" required>
-                        <span class="password-toggle" id="togglePassword">
-                            <img src="https://th.bing.com/th/id/R.df83400995ad5a5ab250d16a57deb1b8?rik=Rww%2fZuCSGw4rAA&pid=ImgRaw&r=0" alt="Toggle Password Visibility">
-                        </span>
                     </div>
                     <button type="submit">Login
                       <span></span>
@@ -293,22 +290,7 @@
             }
         });
 
-        // Récupérer les éléments
-        var passwordInput = document.getElementById("password");
-        var togglePassword = document.getElementById("togglePassword");
-        var isPasswordVisible = false;
-
-        // Ajouter un écouteur d'événement pour le clic sur l'icône de l'œil
-        togglePassword.addEventListener("click", function() {
-            isPasswordVisible = !isPasswordVisible;
-            if (isPasswordVisible) {
-                passwordInput.setAttribute("type", "text");
-                togglePassword.innerHTML = '<img src="https://th.bing.com/th/id/OIP.nipf4cFT4fgxndi3gL1WXAAAAA?rs=1&pid=ImgDetMain" alt="Toggle Password Visibility">';
-            } else {
-                passwordInput.setAttribute("type", "password");
-                togglePassword.innerHTML = '<img src="https://th.bing.com/th/id/R.df83400995ad5a5ab250d16a57deb1b8?rik=Rww%2fZuCSGw4rAA&pid=ImgRaw&r=0" alt="Toggle Password Visibility">';
-            }
-        });
+        
     </script>
     
 </body>
