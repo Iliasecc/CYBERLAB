@@ -224,6 +224,23 @@
           transform: translate(-50%, -50%);
           z-index: 0;
       }
+        @keyframes yellow-border {
+        0% {
+            border-color: transparent;
+            box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.7); /* Changement de la couleur de l'ombre */
+        }
+        100% {
+            border-color: rgba(0, 0, 255, 1); /* Changement de la couleur de la bordure */
+            box-shadow: 0 0 0 5px rgba(0, 0, 255, 0); /* Changement de la couleur de l'ombre */
+        }
+    }
+    
+
+    /* Appliquer l'animation à l'effet jaune */
+    .animated-input:focus-within label,
+    .animated-input:focus-within input {
+        animation: yellow-border 1.6s linear;
+    }
     </style>
 </head>
 <body>
