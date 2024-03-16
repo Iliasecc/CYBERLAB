@@ -105,24 +105,125 @@
         }
 
         button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+          width: 100%;
+          padding: 10px;
+          background-color: #158ed4;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          position: relative; /* Ajout de position relative */
+          overflow: hidden; /* Pour cacher le débordement des spans */
+      }
 
-        button:hover {
-            background-color: #0056b3;
-        }
+      button:hover {
+          background-color:#036383;
+      }
 
-        #showPasswordLabel {
-            cursor: pointer;
-            display: block;
-            margin-top: 10px;
-        }
+      button span {
+          position: absolute;
+          display: block;
+      }
+
+      button span:nth-child(1) {
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #03f4d4);
+          animation: btn-anim1 1s linear infinite;
+      }
+
+      @keyframes btn-anim1 {
+          0% {
+              left: -100%;
+          }
+          50%,100% {
+              left: 100%;
+          }
+      }
+
+      button span:nth-child(2) {
+          top: -100%;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(180deg, transparent,#03f4d4);
+          animation: btn-anim2 1s linear infinite;
+          animation-delay: .25s
+      }
+
+      @keyframes btn-anim2 {
+          0% {
+              top: -100%;
+          }
+          50%,100% {
+              top: 100%;
+          }
+      }
+
+      button span:nth-child(3) {
+          bottom: 0;
+          right: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(270deg, transparent, #03f4d4);
+          animation: btn-anim3 1s linear infinite;
+          animation-delay: .5s
+      }
+
+      @keyframes btn-anim3 {
+          0% {
+              right: -100%;
+          }
+          50%,100% {
+              right: 100%;
+          }
+      }
+
+      button span:nth-child(4) {
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, #03f4d4);
+          animation: btn-anim4 1s linear infinite;
+          animation-delay: .75s
+      }
+
+      @keyframes btn-anim4 {
+          0% {
+              bottom: -100%;
+          }
+          50%,100% {
+              bottom: 100%;
+          }
+      }
+
+      /* Animation pour l'effet jaune autour du bouton */
+      @keyframes yellow-border {
+          0% {
+              transform: scale(1);
+          }
+          100% {
+              transform: scale(1.2);
+          }
+      }
+
+      /* Appliquer l'animation à l'effet jaune */
+      button:active::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 200%;
+          height: 200%;
+          background-color: #03f4d4(255, 255, 0, 0.5);
+          border-radius: 50%;
+          animation: yellow-border 0.5s linear;
+          transform: translate(-50%, -50%);
+          z-index: 0;
+      }
     </style>
 </head>
 <body>
@@ -134,7 +235,7 @@
                 <p>Réinventons la formation pratique</p>
             </div>
             <div class="right-side">
-                <img class="logo" src="image/cyberlog.jpg" alt="Project Logo">
+                <img class="logo" src="c:\Users\Lenovo\Downloads\cyberlog.jpg" alt="Project Logo">
                 <h2> BIENVENU</h2>
                 <form id="loginForm">
                     <div class="form-group">
@@ -148,7 +249,12 @@
                             <img src="https://th.bing.com/th/id/R.df83400995ad5a5ab250d16a57deb1b8?rik=Rww%2fZuCSGw4rAA&pid=ImgRaw&r=0" alt="Toggle Password Visibility">
                         </span>
                     </div>
-                    <button type="submit">Login</button>
+                    <button type="submit">Login
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
                 </form>
             </div>
         </div>
