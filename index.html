@@ -107,7 +107,7 @@
         button {
           width: 100%;
           padding: 10px;
-          background-color: #158ed4;
+          background-color: #036383;
           color: #fff;
           border: none;
           border-radius: 5px;
@@ -117,7 +117,7 @@
       }
 
       button:hover {
-          background-color:#036383;
+          background-color:#158ed4;
       }
 
       button span {
@@ -252,7 +252,7 @@
                 <p>Réinventons la formation pratique</p>
             </div>
             <div class="right-side">
-                <img class="logo" src="image/cyberlog.jpg" alt="Project Logo">
+                <img class="logo" src="c:\Users\Lenovo\Downloads\cyberlog.jpg" alt="Project Logo">
                 <h2> BIENVENU</h2>
                 <form id="loginForm">
                     <div class="form-group animated-input">
@@ -262,6 +262,9 @@
                     <div class="form-group animated-input">
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" placeholder="Password" required>
+                        <span class="password-toggle" id="togglePassword">
+                            <img src="https://th.bing.com/th/id/R.df83400995ad5a5ab250d16a57deb1b8?rik=Rww%2fZuCSGw4rAA&pid=ImgRaw&r=0" alt="Toggle Password Visibility">
+                        </span>
                     </div>
                     <button type="submit">Login
                       <span></span>
@@ -290,7 +293,22 @@
             }
         });
 
-        
+        // Récupérer les éléments
+        var passwordInput = document.getElementById("password");
+        var togglePassword = document.getElementById("togglePassword");
+        var isPasswordVisible = false;
+
+        // Ajouter un écouteur d'événement pour le clic sur l'icône de l'œil
+        togglePassword.addEventListener("click", function() {
+            isPasswordVisible = !isPasswordVisible;
+            if (isPasswordVisible) {
+                passwordInput.setAttribute("type", "text");
+                togglePassword.innerHTML = '<img src="https://th.bing.com/th/id/OIP.nipf4cFT4fgxndi3gL1WXAAAAA?rs=1&pid=ImgDetMain" alt="Toggle Password Visibility">';
+            } else {
+                passwordInput.setAttribute("type", "password");
+                togglePassword.innerHTML = '<img src="https://th.bing.com/th/id/R.df83400995ad5a5ab250d16a57deb1b8?rik=Rww%2fZuCSGw4rAA&pid=ImgRaw&r=0" alt="Toggle Password Visibility">';
+            }
+        });
     </script>
     
 </body>
