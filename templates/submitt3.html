@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" type="text/css" href="static/css/submit.css">
+    
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="static/js/script.js"></script>
@@ -18,7 +19,6 @@
 
     </style>
 
-
 </head>
 <body>
     <nav>
@@ -30,37 +30,25 @@
             <a href='{{ url_for('index1') }}' class="home-button" style="font-family: Arial, sans-serif; ">Accueil</a>
             <a href='{{ url_for('indexx') }}' class="TP-button" >Revenir au TP</a>
             <a href='{{ url_for('index') }}' class="Deconn-button" >Se Déconnecter</a>
-            <span class="nav-title" style="display: flex; align-items: center; justify-content: flex-end; flex-grow: 0.9;margin-top: 8px; ">
+            <span class="nav-title" style="display: flex; align-items: center; justify-content: flex-end; flex-grow: 0.9;margin-top:8px ; ">
                 Merci d'avoir utilisé CYBERLAB ❤️
             </span>
             
         </div>
     </nav>
     <main>
-        <button id="launchQuizBtn" onclick="launchQuiz()" style="align-self: start; text-decoration: none; justify-self: end; border-radius: 100px; padding: 0.5rem 1.5rem;border: 0;color: hsl(0 0% 100%);font-weight: 120;cursor: pointer;background: linear-gradient(to right, #036383, #06bdbd);transition: background-position 0.15s; margin-bottom:5px">Déposer votre compte rendu</button>
+        <button id="launchQuizBtn" onclick="launchQuiz()" style="align-self: start; text-decoration: none; justify-self: end; border-radius: 100px; padding: 0.5rem 1.5rem;border: 0;color: hsl(0 0% 100%);font-weight: 120;cursor: pointer;background: linear-gradient(to right, #036383, #06bdbd);transition: background-position 0.15s;">Lancer le quizz</button>
     
-       
+        
         <form id="submitPdfForm" action="/submit" method="post" enctype="multipart/form-data" style="display: none; color: black;">
             <h2>Déposer Votre Compte Rendu</h2>
             <input id="pdfInput" type="file" name="pdf" accept=".pdf">
-            <button type="submit" class="submit-btn" id="submitPdfBtn" style="align-self: start; text-decoration: none; justify-self: end; border-radius: 100px; padding: 0.5rem 1.5rem;border: 0;color: hsl(0 0% 100%);font-weight: 120;cursor: pointer;background: linear-gradient(to right, #036383, #06bdbd);transition: background-position 0.15s;">Soumettre</button>
+            <button type="submit" class="submit-btn" id="submitPdfBtn" style="align-self: start; text-decoration: none; justify-self: end; border-radius: 100px; padding: 0.5rem 1.5rem;border: 0;color: hsl(0 0% 100%);font-weight: 120;cursor: pointer;background: linear-gradient(to right, #9333ea, #036383) 0 0 / 200% 100% no-repeat;transition: background-position 0.15s;">Soumettre</button>
         </form>
-
+        
         <div id="pdfContainer"></div>
         
-        <div id="aiResponse" style="text-align: center;">
-            <h2 style="color: black;"><span class="robot-emoji">&#129302;</span>Feedback</h2>
-            <p id="aiOutput" style="color: black;">{{ feedback }}</p>
-            <div style="margin-top: 30px;">
-                <h2 style="color: black;">Note</h2>
-                <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(to bottom, #e0eefa 0%, #ececec 100%); border: 2px solid #036383; color: red; font-size: 24px; font-weight: bold; display: flex; justify-content: center; align-items: center; margin: auto;">
-                    {{ note }}
-                </div>
-                
-                
-            </div>
-        </div>
-        
+  
       
         
         
@@ -154,16 +142,13 @@
         document.getElementById("submitPdfBtn").addEventListener("click", submitPdf);
     });
     function launchQuiz() {
-        // Masquer le bouton "Lancer le quizz"
-        document.getElementById("launchQuizBtn").style.display = "none";
-        // Afficher la section du quizz
-        document.getElementById("submitPdfForm").style.display = "block";
-        document.querySelector('form[action="/submit"]').style.display = 'block';
-        document.querySelector('.results-section').style.display = 'none';
+       
+       
+        window.location.href = "{{ url_for('quizz3') }}";
         
     }
+    
 </script>
-
     
 </body>
 </html>

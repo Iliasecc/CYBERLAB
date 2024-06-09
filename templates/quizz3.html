@@ -279,8 +279,8 @@
   </div>
   
     <div>
-      <h3>TP1 Cyberlab: Contrôle du Bras Robotique Ned2</h3>
-      <p>Bienvenue dans le quiz de compréhension du TP1 sur Cyberlab. Êtes-vous prêt à vérifier votre compréhension et votre exécution du TP? C'est le moment de démontrer vos compétences.</p>
+      <h3>TP2 Cyberlab : Initialisation à la carte Rasbperry-Pi</h3>
+      <p>Bienvenue dans le quiz de compréhension du TP2 sur Cyberlab. Êtes-vous prêt à vérifier votre compréhension et votre exécution du TP? C'est le moment de démontrer vos compétences.</p>
       <button class="btn btn1 continue-btn" style="cursor: pointer;">Continuer</button>
     </div>
   </section>
@@ -319,7 +319,7 @@
   
   <h3 style="color:#ffffff;margin-top:20px;"> Ton Certificat</h3>
   <div class="certificate" >
-    <h4>Cyberlab TP1 Quizz</h4>
+    <h4>Cyberlab TP2 Quizz</h4>
     <p id="name">Cyberlab</p>
     <p id="score">Score: 50%</p>
     <small id="id">Test Id : 202020</small>
@@ -354,13 +354,33 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
-  // Do not see the answer
-  const ques = [
-  { que: "Capteur utilisé pour la détection des défauts de surface :", option: ["capteur optique", "capteur inductif", "capteur laser"], crt: 0 },
-  { que: "Protocole de communication pour les données de contrôle :", option: ["CAN bus", "Modbus", "Ethernet/IP"], crt: 0 },
-  { que: "Fonction principale de l'algorithme de traitement d'image :", option: ["détection de contours", "analyse spectrale", "segmentation d'image"], crt: 2 },
-  { que: "Principe de fonctionnement de la technologie de tri inductif :", option: ["tri par conductivité électrique", "tri par résonance magnétique", "tri par mesure de densité"], crt: 2 },
-  { que: "Méthode pour la détection de pièces en 3D :", option: ["imagerie stéréoscopique", "Lidar", "Sonar"], crt: 1 }
+
+const ques = [
+  {
+    que: "Quel type de GPIO (General Purpose Input/Output) est utilisé pour connecter les LED à une Raspberry Pi ?",
+    option: [" GPIO numérique", " GPIO analogique", " GPIO PWM (Pulse Width Modulation)"],
+    crt: "0"
+  },
+  {
+    que: "Pourquoi utilise-t-on des résistances en série avec les LED dans ce projet ?",
+    option: [" Pour limiter le courant et protéger les LED", "Pour augmenter la luminosité des LED", "Pour changer la couleur des LED"],
+    crt: "0"
+  },
+  {
+    que: "Quelle est l'utilité de la modulation de largeur d'impulsion (PWM) dans le contrôle des LED ?",
+    option: [ " Pour réguler la tension d'alimentation des LED", " Pour synchroniser les LED avec d'autres périphériques"," Pour ajuster la luminosité des LED en variant le rapport cyclique"],
+    crt: "2"
+  },
+  {
+    que: "Comment peut-on programmer la Raspberry Pi pour contrôler le temps d'activation et de désactivation des LED ?",
+    option: [" En utilisant un capteur de lumière ambiante",  "En ajustant manuellement les résistances des LED"," En configurant des temporisateurs logiciels dans le script Python"],
+    crt: "2"
+  },
+  {
+    que: "Quelle est la méthode courante pour surveiller l'état des LED à partir d'une Raspberry Pi ?",
+    option: [" En utilisant des capteurs de courant", "En lisant l'état des broches GPIO auxquelles les LED sont connectées"," En mesurant la tension aux bornes des LED"],
+    crt: "1"
+  }
 ];
 
 

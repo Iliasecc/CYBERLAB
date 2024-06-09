@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYBERLAB : TP1</title>
+    <title>CYBERLAB : TP2</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <!-- Lien vers Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <!-- Ajout de Bootstrap pour le carrousel -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-5CKv7f0D5yjkg48ElIu9J42frB5Bzxx9ikT7AbB3nw/InjAySALwFvH1wzkrsVJuB9WlWsDf/2M1ldl37eZClw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
         <style>
+            .home-button {
+                background-color:transparent;
+                border: none;
+                cursor: pointer;
+            }
+            
+            /* Style pour l'icône */
+            .home-button i {
+                font-size: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+                color: #000;
+                 /* Couleur de l'icône */
+            }
+            
+            /* Style au survol */
+            .home-button:hover i {
+                color: #000000; /* Couleur de l'icône au survol */
+            }
 
  
             .carousel-item img {
@@ -161,7 +179,7 @@
             position: fixed;
             bottom: 0;
             right: 0;
-            width: 400px;
+            width: 300px;
             height: 90%;
             background-color: #ffffff;
             border-top-left-radius: 10px;
@@ -182,6 +200,7 @@
         }
         
 
+        
         
 
         
@@ -211,22 +230,29 @@
     
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href='{{ url_for('index1') }}' onclick="gotoacceuil()" >
+          <a class="navbar-item" href='{{ url_for('index1') }}' onclick="" >
             Accueil
           </a>
-          <a class="navbar-item" href="static/pdf_en.pdf" download="resultats.pdf">
+          <a class="navbar-item" href="static/document TP2.pdf" download="resultats.pdf">
             Documentation
           </a>
           <a class="navbar-item" href=#  onclick="confirmQuiz()">
             Déposer Votre Compte Rendu
           </a>
-          <a class="navbar-item" href='{{ url_for('index') }}' >
+          <a class="navbar-item" href='{{ url_for('index') }}' onclick="" >
             Se Déconnecter
           </a>
+          
         </div>
       </div>
     </nav>
     
+    
+
+     <!-- Document à télécharger -->
+   
+     
+
      <section class="hero is-fullheight">
         <div class="hero-body">
             <div class="container">
@@ -235,7 +261,7 @@
                         <section>
                             <div class="section-label">Regarder le retour en direct ▶️</div>
                             <div id="custom-stream" style="height: 300px; background-color:#ffffff !important; width: 100%; margin: 0 auto; border: 2px solid #036383; border-radius: 10px; overflow: hidden;"></div>
-
+                            
                         </section>
                     </div>
                     <div class="column is-half">
@@ -246,15 +272,18 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item">
                                         <video controls>
-                                            <source src="https://niryo.com/wp-content/uploads/2023/10/niryo_electro_conveyor.mp4" type="video/mp4">
+                                            <source src="static\Raspberry Pi LED.mp4" type="video/mp4">
                                             Votre navigateur ne supporte pas la lecture de vidéos.
                                         </video>
                                     </div>
                                     <div class="carousel-item active">
-                                        <img src="https://github.com/Iliasecc/CYBERLAB/blob/main/image/ecosystem_ned2.png?raw=true" class="d-block w-100" alt="Image 1">
+                                        <img src="https://th.bing.com/th/id/OIP.FQbfDuo2hsJ2Clbcq5FR6wAAAA?w=437&h=501&rs=1&pid=ImgDetMain" class="d-block w-100" alt="Image 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://github.com/Iliasecc/CYBERLAB/blob/main/image/fr_visiot_ned2.png?raw=true" class="d-block w-100" alt="Image 1">
+                                        <img src="https://raspberry-pi.fr/wp-content/uploads/2019/05/gpio-768x576.png" class="d-block w-100" alt="Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://www.raspberryme.com/wp-content/uploads/2020/06/Circuit-des-feux-de-circulation-Raspberry-Pi-avec-GPIO-partie-300x215.png" class="d-block w-100" alt="Image 1">
                                     </div>
                                 </div>
                                 <!-- Flèches de navigation -->
@@ -272,75 +301,57 @@
                         </div>
                     </div>
                 </div>
-                <!-- Espace pour le code Python -->
-                <div class="content" style="margin-top:5px">
-                    <h2>Contrôle du Ned2</h2>
-                    <iframe src="https://trinket.io/embed/python3/f4ff630327" style=" filter: invert(100%);background-color: #1e1e1e; /* Fond sombre */width: 100%;border: none;" width="100%" height="506" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <section class="sec3">
+                    <div class="box">
+                        <div class="box__header">
+                            <div class="index" style="color: #000000 !important;">1/3</div>
+                            <div class="toast" style="color: #000000 !important;"></div>
+                        </div>
+                        <h3 class="question" style="color: #000000 !important; margin-top:0px !important;"></h3>
+                        <ul class="quiz" style="cursor: pointer; color:#000000"></ul>
+                        <button class="submit" style="cursor: pointer; align-self: start; text-decoration: none; justify-self: end; border-radius: 100px; padding: 0.5rem 1.5rem; border: 0; color: hsl(0 0% 100%); font-weight: 120; cursor: pointer; background: linear-gradient(to right, #036383, #06bdbd); transition: background-position 0.15s;">Soumettre réponse</button>
+                    </div>
+                </section>
+                
+                <div class="content1" style="margin-top:5px; display:none;">
+                    <h2 style="color:#000;">Contrôle de la carte raspberry-pi</h2>
+                    <iframe src="https://trinket.io/embed/python3/f4ff630327" style="filter: invert(100%); background-color: #1e1e1e; width: 100%; border: none;" width="100%" height="506" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 </div>
                 
-                <form action="/indexx" method="post" enctype="multipart/form-data" style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+                <form action="/index3" method="post" enctype="multipart/form-data" style="display:none; background-color: #f0f0f0; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
                     <label style="font-family: 'Arial', sans-serif; font-size: 16px; color: #000000; font-weight: bold; margin-bottom: 10px; display: block; text-decoration: underline;">Soumettez votre script Python</label>
                     <input style="color: #000000; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" type="file" name="python_code" accept=".zip">
                     <button style="cursor: pointer; align-self: start; text-decoration: none; justify-self: end; border-radius: 100px; padding: 0.5rem 1.5rem; border: 0; color: hsl(0 0% 100%); font-weight: 120; cursor: pointer; background: linear-gradient(to right, #036383, #06bdbd); transition: background-position 0.15s;">Soumettre</button>
                     <span id="etat_code" style="font-family: 'Arial', sans-serif; font-size: 14px; color: #000000; margin-left: 15px;">{{ etat_code }}</span>
                 </form>
-
-                <div class="container1">
-                    
-                    <button id="toggleDrawer" class="half-circle-btn" onmouseover="showMessage('Étapes à suivre')" onmouseout="hideMessage()">←</button>
-                    <div id="drawer" class="drawer">
-                        <button id="closeDrawer" class="close-btn" onmouseover="showMessage('Fermer le tiroir')" onmouseout="hideMessage()">X</button>
-                        <div id="steps" class="steps-content">
-                            <!-- Étapes spécifiques au TP1 -->
-                            
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 1 :</span> Lire les instructions du TP.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 2 :</span> Vérifier le bon fonctionnement du retour en direct.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 3 :</span> Visualiser les images, vidéos et attentes du TP.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 4 :</span> Consulter la documentation sur le bras robotique Niryo NED2.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 5 :</span> Écrire le code Python pour contrôler le bras.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 6 :</span> Analyser les résultats dans le retour en direct.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 7 :</span> Déposer le compte rendu.</p>
-
-                            <!-- Étapes générales pour les deux TP -->
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 8 :</span> Avant de déposer le compte rendu, passer un quizz et réussir 80% des questions.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 9 :</span> Le compte rendu sera corrigé automatiquement par une IA.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 10 :</span> Lire le feedback et voir la note approximative.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 11 :</span> Le compte rendu et le feedback seront envoyés au professeur responsable du TP par mail.</p>
-
-                        </div>
-                        
-                        
-                    </div>
-                    
-                    
+                
+                <div class="retry" style="display: none; text-align: center;">
+                    <p style="color: #000;">Malheureusement, vous devez repasser le quiz.</p>
+                    <button class="retry-button"  style="cursor: pointer; align-self: start; text-decoration: none; justify-self: end; border-radius: 100px; padding: 0.5rem 1.5rem; border: 0; color: hsl(0 0% 100%); font-weight: 120; cursor: pointer; background: linear-gradient(to right, #036383, #06bdbd); transition: background-position 0.15s;">Recommencer le quiz</button>
                 </div>
-                <div id="message"></div>
-                
-                
-                
-                
+               
                 
                 
             </div>
-            
         </div>
     </section>
     
-
+    
+    <button class="home-button" onclick="goToHomePage()">
+        &#x1F503;
+    </button>
     <footer class="footer" style="height:80px;" >
         <div class="content has-text-centered">
             <p style="color: #000000;" >Ce site est développé par le groupe plbd 26.</p>
             <p style="color: #000000 ;"> &copy; 2024 Tous droits réservés.</p>
         </div>
     </footer>
-
     <!-- Icône de stylo -->
     <div class="pen-icon" onclick="toggleNotebook()">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
             <path d="M11.02 1.929a1 1 0 0 1 1.414 0l2.636 2.636a1 1 0 0 1 0 1.414L5.05 16H3a1 1 0 0 1-1-1V9.95L11.02 1.929zm3.122 3.121L11 3.05l1.829-1.829 3.142 3.142-1.829 1.829zM4.364 13l9.285-9.285-1.415-1.415L2.95 11.586 4.364 13zm-2.122 2h1.769L13.05 5.314 10.737 3H8.967l-7.06 7.06v1.77l-2 2v1h1l2-2h1.768L13.05 5.314 11.737 4H3.243L1.243 6z"/>
         </svg>
     </div>
-
 
 
 
@@ -362,6 +373,36 @@
     <textarea id="note-text" class="textarea" placeholder="Écrivez quelque chose..." style="color:#000000"></textarea>
     <button id="save-button" class="button is-primary">Save</button>
 </div>
+<div class="container1">
+                    
+    <button id="toggleDrawer" class="half-circle-btn" onmouseover="showMessage('Étapes à suivre')" onmouseout="hideMessage()">←</button>
+    <div id="drawer" class="drawer">
+        <button id="closeDrawer" class="close-btn" onmouseover="showMessage('Fermer le tiroir')" onmouseout="hideMessage()">X</button>
+        <div id="steps" class="steps-content">
+            <!-- Étapes spécifiques au TP2 -->
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 1 :</span> Lire les instructions du TP.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 2 :</span> Vérifier le bon fonctionnement du retour en direct.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 3 :</span> Visualiser les images, vidéos et attentes du TP.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 4 :</span> Consulter la documentation sur la carte Raspberry Pi.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 5 :</span> Valider un test simple de 3 questions.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 6 :</span> Écrire le code pour contrôler la carte Raspberry Pi.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 7 :</span> Analyser les résultats dans le retour en direct.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 8 :</span> Déposer le compte rendu.</p>
+
+            <!-- Étapes générales pour les deux TP -->
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 9 :</span> Avant de déposer le compte rendu, passer un quizz et réussir 80% des questions.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 10 :</span> Le compte rendu sera corrigé automatiquement par une IA.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 11 :</span> Lire le feedback et voir la note approximative.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 12 :</span> Le compte rendu et le feedback seront envoyés au professeur responsable du TP par mail.</p>
+
+        </div>
+        
+        
+    </div>
+    
+    
+</div>
+<div id="message"></div>
 
 
 <script>
@@ -501,9 +542,187 @@
 
         // Si l'utilisateur clique sur OK, redirigez-le vers la page HTML souhaitée
         if (confirmation) {
-            window.location.href = "{{ url_for('submitt') }}"; // Remplacez 'quiz_page' par le nom de la route de votre page de quiz
+            window.location.href = "{{ url_for('submitt3') }}"; // Remplacez 'quiz_page' par le nom de la route de votre page de quiz
         }
     }
+</script>
+<script>
+    const questions = [
+    {
+        question: "Quel est le bon circuit pour un feu tricolore utilisant des LED?",
+        choices: [
+            '<img src="static/image/circuit 2.jpeg" alt="Circuit B" style="width: 50%; height: 280px;">',
+            '<img src="static/image/circuit1.jpeg" alt="Circuit A" style="width: 50%; height: 280px;">',
+            '<img src="static/image/circuit 3.jpeg" alt="Circuit C" style="width: 50%; height: 280px;">'
+        ],
+        correctAnswer: 1
+        
+        
+        
+    },
+    
+    {
+        question: "Quel module doit-on importer pour contrôler les GPIO en Python?",
+        choices: ["import RPi.GPIO as GPIO", "import gpio as GPIO", "import raspberry.GPIO as GPIO"],
+        correctAnswer: 0
+    },
+    {
+        question: "Quelle est la résistance recommandée pour limiter le courant d'une LED?",
+        choices: ["220 ohms", "1000 ohms", "10 ohms"],
+        correctAnswer: 0
+    }
+    
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+const questionElement = document.querySelector('.question');
+const choicesElement = document.querySelector('.quiz');
+const submitButton = document.querySelector('.submit');
+const indexElement = document.querySelector('.index');
+const toastElement = document.querySelector('.toast');
+const contentElement = document.querySelector('.content'); // Assurez-vous que cet élément est sélectionné correctement
+const formElement = document.querySelector('form');
+const retryElement = document.querySelector('.retry');
+const retryButton = document.querySelector('.retry-button');
+
+// Fonction pour stocker un marqueur dans les cookies
+function setQuizCompleted() {
+    document.cookie = "quizCompleted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+}
+
+
+// Fonction pour vérifier si le quiz a été complété en consultant les cookies
+function isQuizCompleted() {
+    return document.cookie.split(';').some((item) => item.trim().startsWith('quizCompleted='));
+}
+
+// Fonction pour cacher la section sec3 si le quiz a été complété
+function hideSec3IfQuizCompleted() {
+    const sec3Element = document.querySelector('.sec3');
+    if (isQuizCompleted()) {
+        sec3Element.style.display = 'none';
+        document.querySelector('.content1').style.display = 'block';
+        formElement.style.display = 'block';
+    } else {
+        sec3Element.style.display = 'block';
+    }
+}
+// Fonction pour supprimer le cookie "quizCompleted"
+function deleteQuizCompletedCookie() {
+    document.cookie = "quizCompleted=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+// Fonction pour vérifier si le cookie "quizCompleted" existe
+function isQuizCompletedCookieExists() {
+    return document.cookie.split(';').some((item) => item.trim().startsWith('quizCompleted='));
+}
+
+function goToHomePage() {
+    deleteQuizCompletedCookie();
+    window.location.href = "{{ url_for('index') }}"; // Changer l'URL selon votre besoin
+}
+
+
+
+
+// Appeler cette fonction au chargement de la page pour vérifier si le quiz a été complété
+hideSec3IfQuizCompleted();
+
+function showQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+    choicesElement.innerHTML = '';
+    currentQuestion.choices.forEach((choice, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = choice;
+        li.dataset.index = index;
+        li.addEventListener('click', () => {
+            document.querySelectorAll('.quiz li').forEach(li => li.classList.remove('select'));
+            li.classList.add('select');
+        });
+        if (currentQuestionIndex === 0) {
+            li.classList.add('question1'); // Ajouter une classe spécifique à la première question
+        } else {
+            li.classList.add('question2'); // Ajouter une classe spécifique aux autres questions
+        }
+        choicesElement.appendChild(li);
+    });
+    indexElement.textContent = `${currentQuestionIndex + 1}/${questions.length}`;
+}
+
+
+function showToast(message, correct) {
+    toastElement.textContent = message;
+    toastElement.classList.add(correct ? 'correct' : 'incorrect');
+    toastElement.style.display = 'inline-block';
+    setTimeout(() => {
+        toastElement.style.display = 'none';
+        toastElement.classList.remove(correct ? 'correct' : 'incorrect');
+    }, 2000);
+}
+
+submitButton.addEventListener('click', () => {
+    const selectedChoice = document.querySelector('.quiz li.select');
+    if (!selectedChoice) {
+        alert("Veuillez sélectionner une option");
+        return;
+    }
+
+    const selectedAnswer = parseInt(selectedChoice.dataset.index, 10);
+    const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+
+    if (selectedAnswer === correctAnswer) {
+        score++;
+        showToast("Correct", true);
+    } else {
+        showToast("Incorrect", false);
+    }
+
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showResult();
+    }
+});
+
+function showResult() {
+    questionElement.textContent = "Quiz terminé !";
+    questionElement.style.color = '#000'; // Texte noir pour "Quiz terminé !"
+    choicesElement.innerHTML = `<p style="color: #000;">Score: ${score}/${questions.length}</p>`; // Texte noir pour le score
+    submitButton.style.display = 'none';
+
+    setTimeout(() => {
+        if (score === questions.length) {
+            document.querySelector('.content1').style.display = 'block';
+            formElement.style.display = 'block';
+            document.querySelector('.sec3').style.display = 'none';
+            // Stocker un marqueur indiquant que le quiz a été complété
+            setQuizCompleted();
+        } else {
+            choicesElement.innerHTML += `<p style="color: #000;">Malheureusement, vous devez repasser le quiz.</p>`;
+            choicesElement.innerHTML += `<button class="retry-button" onclick="retryQuiz()"style="cursor: pointer; align-self: start; text-decoration: none; justify-self: end; border-radius: 100px; padding: 0.5rem 1.5rem; border: 0; color: hsl(0 0% 100%); font-weight: 120; cursor: pointer; background: linear-gradient(to right, #036383, #06bdbd); transition: background-position 0.15s;">Recommencer</button>`;
+        }
+    }, 1000);
+}
+
+function retryQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    retryElement.style.display = 'none';
+    submitButton.style.display = 'block';
+    document.querySelector('.sec3').style.display = 'block';
+    showQuestion();
+}
+
+showQuestion();
+
+
+
+
 </script>
 <script>
     const toggleDrawerBtn = document.getElementById('toggleDrawer');
@@ -540,6 +759,7 @@
     
     
 </script>
+
 
 
         
