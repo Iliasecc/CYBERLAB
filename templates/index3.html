@@ -285,6 +285,8 @@
                                     <div class="carousel-item">
                                         <img src="https://www.raspberryme.com/wp-content/uploads/2020/06/Circuit-des-feux-de-circulation-Raspberry-Pi-avec-GPIO-partie-300x215.png" class="d-block w-100" alt="Image 1">
                                     </div>
+                                    
+                                    
                                 </div>
                                 <!-- Flèches de navigation -->
                                 <div class="carousel-controls-wrapper" style="display: flex; justify-content: center;">
@@ -301,6 +303,7 @@
                         </div>
                     </div>
                 </div>
+                <h2 style="color:#000;margin-bottom:20px;">Contrôle de la carte raspberry-pi : Feu tricolore</h2>
                 <section class="sec3">
                     <div class="box">
                         <div class="box__header">
@@ -313,10 +316,12 @@
                     </div>
                 </section>
                 
-                <div class="content1" style="margin-top:5px; display:none;">
-                    <h2 style="color:#000;">Contrôle de la carte raspberry-pi</h2>
-                    <iframe src="https://trinket.io/embed/python3/f4ff630327" style="filter: invert(100%); background-color: #1e1e1e; width: 100%; border: none;" width="100%" height="506" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <div class="content1" style="margin-top:5px;display:none;  ">
+                    <iframe src="https://trinket.io/embed/python3/f4ff630327" style="filter: invert(100%); background-color: #1e1e1e; width: 60%; border: none; height: 506px;" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe><img src="static/image/circuit1.jpeg" alt="Circuit Image" style="margin-top:-500px;width: 40%; height: 306px;">
+                    
                 </div>
+                
+                
                 
                 <form action="/index3" method="post" enctype="multipart/form-data" style="display:none; background-color: #f0f0f0; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
                     <label style="font-family: 'Arial', sans-serif; font-size: 16px; color: #000000; font-weight: bold; margin-bottom: 10px; display: block; text-decoration: underline;">Soumettez votre script Python</label>
@@ -340,6 +345,10 @@
     <button class="home-button" onclick="goToHomePage()">
         &#x1F503;
     </button>
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <button  class="boutt"  onclick="goToHomePage1()" style="display:none;align-self: start; text-decoration: none; justify-self: end; border-radius: 100px; padding: 0.5rem 1.5rem;border: 0;color: hsl(0 0% 100%);font-weight: 120;cursor: pointer;background: linear-gradient(to right, #036383, #06bdbd);transition: background-position 0.15s; margin-bottom:35px">Passer à la deuxième consigne</button>
+    </div>
+    
     <footer class="footer" style="height:80px;" >
         <div class="content has-text-centered">
             <p style="color: #000000;" >Ce site est développé par le groupe plbd 26.</p>
@@ -380,20 +389,24 @@
         <button id="closeDrawer" class="close-btn" onmouseover="showMessage('Fermer le tiroir')" onmouseout="hideMessage()">X</button>
         <div id="steps" class="steps-content">
             <!-- Étapes spécifiques au TP2 -->
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 1 :</span> Lire les instructions du TP.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 2 :</span> Vérifier le bon fonctionnement du retour en direct.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 3 :</span> Visualiser les images, vidéos et attentes du TP.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 4 :</span> Consulter la documentation sur la carte Raspberry Pi.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 5 :</span> Valider un test simple de 3 questions.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 6 :</span> Écrire le code pour contrôler la carte Raspberry Pi.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 7 :</span> Analyser les résultats dans le retour en direct.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 8 :</span> Déposer le compte rendu.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 1 :</span> Lire les instructions du TP.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 2 :</span> Vérifier le bon fonctionnement du retour en direct.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 3 :</span> Visualiser les images, vidéos et attentes du TP.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 4 :</span> Consulter la documentation sur la carte Raspberry Pi.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 5 :</span> Valider un test simple de 3 questions.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 6 :</span> Écrire le code pour contrôler la carte Raspberry Pi.</p>
+            <h6 style="color:#000"><span style="color:#036383">Consigne :</span> Recréez un feu tricolore en utilisant une carte Raspberry Pi et des LEDs, en simulant les transitions entre les feux rouge, jaune et vert.</h6>
+            <h6 style="color:#000"><span style="color:#036383">Consigne :</span> Écrivez un script Python pour prendre une photo avec la caméra Raspberry Pi et l'envoyer par e-mail.</h6>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 7 :</span> Télecharger le code Python en fichier Zip et puis déposer le dans la section dessous.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 8 :</span> Cliquer sur passer à l'experience suivante et refaite les memes étapes.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 9 :</span> Analyser les résultats dans le retour en direct.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 10 :</span> Déposer le compte rendu.</p>
 
             <!-- Étapes générales pour les deux TP -->
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 9 :</span> Avant de déposer le compte rendu, passer un quizz et réussir 80% des questions.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 10 :</span> Le compte rendu sera corrigé automatiquement par une IA.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 11 :</span> Lire le feedback et voir la note approximative.</p>
-            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 12 :</span> Le compte rendu et le feedback seront envoyés au professeur responsable du TP par mail.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 11 :</span> Avant de déposer le compte rendu, passer un quizz et réussir 80% des questions.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 12 :</span> Le compte rendu sera corrigé automatiquement par une IA.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 13 :</span> Lire le feedback et voir la note approximative.</p>
+            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 14 :</span> Le compte rendu et le feedback seront envoyés au professeur responsable du TP par mail.</p>
 
         </div>
         
@@ -403,6 +416,7 @@
     
 </div>
 <div id="message"></div>
+
 
 
 <script>
@@ -422,6 +436,9 @@
         link.href = window.URL.createObjectURL(blob);
         link.download = filename;
         link.click();
+    }
+    function launchEX2() {
+        window.location.href = "{{ url_for('index4') }}";
     }
 </script>
     
@@ -605,6 +622,7 @@ function hideSec3IfQuizCompleted() {
         sec3Element.style.display = 'none';
         document.querySelector('.content1').style.display = 'block';
         formElement.style.display = 'block';
+        document.querySelector('.boutt').style.display = 'block';
     } else {
         sec3Element.style.display = 'block';
     }
@@ -621,7 +639,11 @@ function isQuizCompletedCookieExists() {
 
 function goToHomePage() {
     deleteQuizCompletedCookie();
-    window.location.href = "{{ url_for('index') }}"; // Changer l'URL selon votre besoin
+    window.location.href = "{{ url_for('index3') }}"; // Changer l'URL selon votre besoin
+}
+function goToHomePage1() {
+    deleteQuizCompletedCookie();
+    window.location.href = "{{ url_for('index4') }}"; // Changer l'URL selon votre besoin
 }
 
 
@@ -700,6 +722,7 @@ function showResult() {
             document.querySelector('.content1').style.display = 'block';
             formElement.style.display = 'block';
             document.querySelector('.sec3').style.display = 'none';
+            document.querySelector('.boutt').style.display = 'block';
             // Stocker un marqueur indiquant que le quiz a été complété
             setQuizCompleted();
         } else {

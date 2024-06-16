@@ -214,7 +214,7 @@
           <a class="navbar-item" href='{{ url_for('index1') }}' onclick="gotoacceuil()" >
             Accueil
           </a>
-          <a class="navbar-item" href="static/pdf_en.pdf" download="resultats.pdf">
+          <a class="navbar-item" href="static/document TP1.pdf" download="resultats.pdf">
             Documentation
           </a>
           <a class="navbar-item" href=#  onclick="confirmQuiz()">
@@ -251,10 +251,19 @@
                                         </video>
                                     </div>
                                     <div class="carousel-item active">
-                                        <img src="https://github.com/Iliasecc/CYBERLAB/blob/main/image/ecosystem_ned2.png?raw=true" class="d-block w-100" alt="Image 1">
+                                        <img src="https://static.generation-robots.com/19828-home_default/convoyeur-compatible-ned2-ned-et-niryo-one.jpg" class="d-block w-100" alt="Image 1">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="https://cdn.docsie.io/workspace_l6oPtzS7el5z8F4pY/doc_5tEk9cKxFDcH6Zvij/file_MY2VCsaFX5oeauira/ned2_niryo_robotics_educational_arm_f4934d47-8cb0-6f5f-6b9d-da3b767fc3b9.png" class="d-block w-100" alt="Image 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://github.com/Iliasecc/CYBERLAB/blob/main/image/fr_visiot_ned2.png?raw=true" class="d-block w-100" alt="Image 1">
+                                        <img src="https://www.link-pakistan.com/wp-content/uploads/2022/05/conveyor-belt-compatible-with-ned2-ned-and-niryo-one.jpg" class="d-block w-100" alt="Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://th.bing.com/th/id/OIF.zzWm6pqocNwVWhpf0VdSUA?rs=1&pid=ImgDetMain" class="d-block w-100" alt="Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://cdn.docsie.io/workspace_l6oPtzS7el5z8F4pY/doc_5tEk9cKxFDcH6Zvij/file_9JceYWx5RTHzHwoLR/niryocom_application_industry_40_1_v1_0006f7a6-f225-e643-fcbf-71105699ae27.gif"  alt="Image 1" style="height:400px; width:60%">
                                     </div>
                                 </div>
                                 <!-- Flèches de navigation -->
@@ -274,8 +283,8 @@
                 </div>
                 <!-- Espace pour le code Python -->
                 <div class="content" style="margin-top:5px">
-                    <h2>Contrôle du Ned2</h2>
-                    <iframe src="https://trinket.io/embed/python3/f4ff630327" style=" filter: invert(100%);background-color: #1e1e1e; /* Fond sombre */width: 100%;border: none;" width="100%" height="506" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <h2>Contrôle du Ned2 </h2>
+                     <iframe src="https://trinket.io/embed/python3/f4ff630327" style=" filter: invert(100%);background-color: #1e1e1e; /* Fond sombre */width: 100%;border: none;" width="100%" height="506" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
                 </div>
                 
                 <form action="/indexx" method="post" enctype="multipart/form-data" style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
@@ -293,19 +302,32 @@
                         <div id="steps" class="steps-content">
                             <!-- Étapes spécifiques au TP1 -->
                             
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 1 :</span> Lire les instructions du TP.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 2 :</span> Vérifier le bon fonctionnement du retour en direct.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 3 :</span> Visualiser les images, vidéos et attentes du TP.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 4 :</span> Consulter la documentation sur le bras robotique Niryo NED2.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 5 :</span> Écrire le code Python pour contrôler le bras.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 6 :</span> Analyser les résultats dans le retour en direct.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 7 :</span> Déposer le compte rendu.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 1 :</span> Lire les instructions du TP.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 2 :</span> Vérifier le bon fonctionnement du retour en direct.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 3 :</span> Visualiser les images, vidéos et attentes du TP.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 4 :</span> Consulter la documentation sur le bras robotique Niryo NED2.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 5 :</span> Écrire le code Python pour contrôler le bras.</p>
+                            <h6 style="color:#000"><span style="color:#036383">Consigne :</span> Écrivez un code Python qui déplace le bras de la position en bas à gauche à la position en haut à droite, puis effectue une rotation complète de 360° à la fin.</h6>
+
+                            <h6 style="color:#000"><span style="color:#036383">Consigne :</span> Écrivez un code Python pour déplacer le bras robotique en suivant une trajectoire circulaire de rayon 50 cm.</h6>
+
+                            <h6 style="color:#000"><span style="color:#036383">Consigne :</span> Écrivez un code Python pour déplacer le bras robotique de la position en haut à droite à la position en bas à gauche, puis effectuer une série de mouvements de va-et-vient.</h6>
+
+                            <h6 style="color:#000"><span style="color:#036383">Consigne :</span> Écrivez un code Python pour faire en sorte que le bras robotique attrape un objet à la position en bas à gauche et le déplace à la position en haut à droite.</h6>
+
+                            <h6 style="color:#000"><span style="color:#036383">Consigne :</span> Écrivez un code Python pour déplacer le bras robotique de la position en bas à droite à la position en haut à gauche, puis effectuer une rotation de 180°.</h6>
+
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 5 :</span> Écrire le code Python pour contrôler le bras.</p>
+
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 6 :</span> Télecharger le code Python en fichier Zip et puis déposer le dans la section dessous.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 7 :</span> Analyser les résultats dans le retour en direct.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 8 :</span> Déposer le compte rendu.</p>
 
                             <!-- Étapes générales pour les deux TP -->
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 8 :</span> Avant de déposer le compte rendu, passer un quizz et réussir 80% des questions.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 9 :</span> Le compte rendu sera corrigé automatiquement par une IA.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 10 :</span> Lire le feedback et voir la note approximative.</p>
-                            <p style="color:#000"><span style="font-weight:bold;color:#000">Étape 11 :</span> Le compte rendu et le feedback seront envoyés au professeur responsable du TP par mail.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 9 :</span> Avant de déposer le compte rendu, passer un quizz et réussir 80% des questions.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 10 :</span> Le compte rendu sera corrigé automatiquement par une IA.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 11 :</span> Lire le feedback et voir la note approximative.</p>
+                            <p style="color:#000"><span style="font-weight:bold;color:red">Étape 12 :</span> Le compte rendu et le feedback seront envoyés au professeur responsable du TP par mail.</p>
 
                         </div>
                         

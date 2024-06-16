@@ -143,7 +143,7 @@ def quizz3():
     return render_template('quizz3.html')
 @app.route('/submitt')
 def submitt():
-    return render_template('submitt.html')
+    return render_template('submitt.html')@app.route('/submitt3')
 @app.route('/submitt3')
 def submitt3():
     return render_template('submitt3.html')
@@ -167,7 +167,7 @@ def index3():
         file_name = "main.py"
 
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client.connect(("localhost", 9999))
+        client.connect(("172.16.3.11", 9999))
 
         with open(file_name, "rb") as file:
             file_size = os.path.getsize(file_name)
@@ -189,6 +189,47 @@ def index3():
         return render_template('index3.html', etat_code='Fichier transmis')
 
     return render_template('index3.html', etat_code='')
+@app.route('/index4', methods=['GET', 'POST'])
+def index4():
+    if request.method == 'POST':
+        if 'python_code' not in request.files:
+            return render_template('index4.html', error='Aucun fichier téléchargé')
 
+        zip_file = request.files['python_code']
+
+        if zip_file.filename == '':
+            return render_template('index4.html', error='Aucun fichier sélectionné')
+
+        zip_file_path = os.path.join(app.config['UPLOAD_FOLDER'], zip_file.filename)
+        zip_file.save(zip_file_path)
+
+        with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+            zip_ref.extract("main.py")
+
+        file_name = "main.py"
+
+        client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        client.connect(("172.16.3.11", 9999))
+
+        with open(file_name, "rb") as file:
+            file_size = os.path.getsize(file_name)
+            client.send(file_name.encode())
+            time.sleep(0.1)
+            client.send(str(file_size).encode())
+            
+
+            while True:
+                data = file.read(1024)
+                if not data:
+                    break
+                client.sendall(data)
+                time.sleep(0.1)
+
+        client.close()
+        os.remove(zip_file_path)
+
+        return render_template('index4.html', etat_code='Fichier transmis')
+
+    return render_template('index4.html', etat_code='')
 if __name__ == '__main__':
     app.run(debug=False)
