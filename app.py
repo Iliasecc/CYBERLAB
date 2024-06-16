@@ -28,7 +28,7 @@ def extract_text_from_pdf(pdf_path):
 
 # Fonction pour envoyer le texte extrait à OpenAI pour générer un feedback et une note
 def generate_feedback_and_rating(text):
-    client = OpenAI(api_key="sk-proj-6jp5KvuxPxvuwhTurBCXT3BlbkFJ4E6S9iobIKLNfExOPUtG")
+    client = OpenAI(api_key="sk-****************")
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
